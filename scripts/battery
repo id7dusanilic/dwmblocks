@@ -1,0 +1,21 @@
+#!/bin/bash 
+
+status=$(cat /sys/class/power_supply/BAT0/status)
+capacity=$(cat /sys/class/power_supply/BAT0/capacity)
+if [ $status = "Charging" ]; then
+    charge=""
+else
+    charge=""
+fi
+if [ $capacity > 75 ]; then
+    symbol=""
+elif [ $capacity > 50 ]; then
+    symbol=""
+elif [ $capacity > 25 ]; then
+    symbol=""
+elif [ $capacity > 10 ]; then
+    symbol=""
+else
+    symbol=""
+fi
+echo -e " ${symbol} ${charge}${capacity}% "
