@@ -5,7 +5,7 @@ static const Block blocks[] = {
 
 	{"",     "~/software/dwmblocks/scripts/volume",    0,    10},
 
-	{"",     "~/software/dwmblocks/scripts/battery",   60,   11},
+	{"",     "~/software/dwmblocks/scripts/battery",   5,    11},
 
 	{"",     "~/software/dwmblocks/scripts/date",      3600, 12},
 
