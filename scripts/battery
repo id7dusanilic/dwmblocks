@@ -2,20 +2,50 @@
 
 status=$(cat /sys/class/power_supply/BAT0/status)
 capacity=$(cat /sys/class/power_supply/BAT0/capacity)
-if [ $status = "Charging" ]; then
-    charge=""
+if [ $status = "Disharging" ]; then
+    if [ $capacity -gt 90 ]; then
+        symbol=""
+    elif [ $capacity -gt 80 ]; then
+        symbol=""
+    elif [ $capacity -gt 70 ]; then
+        symbol=""
+    elif [ $capacity -gt 60 ]; then
+        symbol=""
+    elif [ $capacity -gt 50 ]; then
+        symbol=""
+    elif [ $capacity -gt 40 ]; then
+        symbol=""
+    elif [ $capacity -gt 30 ]; then
+        symbol=""
+    elif [ $capacity -gt 20 ]; then
+        symbol=""
+    elif [ $capacity -gt 10 ]; then
+        symbol=""
+    else
+        symbol=""
+    fi
 else
-    charge=""
+    if [ $capacity -gt 90 ]; then
+        symbol=""
+    elif [ $capacity -gt 80 ]; then
+        symbol=""
+    elif [ $capacity -gt 70 ]; then
+        symbol=""
+    elif [ $capacity -gt 60 ]; then
+        symbol=""
+    elif [ $capacity -gt 50 ]; then
+        symbol=""
+    elif [ $capacity -gt 40 ]; then
+        symbol=""
+    elif [ $capacity -gt 30 ]; then
+        symbol=""
+    elif [ $capacity -gt 20 ]; then
+        symbol=""
+    elif [ $capacity -gt 10 ]; then
+        symbol=""
+    else
+        symbol=""
+    fi
 fi
-if [ $capacity -gt 80 ]; then
-    symbol=""
-elif [ $capacity -gt 50 ]; then
-    symbol=""
-elif [ $capacity -gt 25 ]; then
-    symbol=""
-elif [ $capacity -gt 10 ]; then
-    symbol=""
-else
-    symbol=""
-fi
-echo -e " ${symbol} ${charge}${capacity}% "
+
+echo -e " ${symbol} ${capacity}% "

@@ -1,4 +1,13 @@
 #!/bin/bash 
 
-vol="$(amixer get Master | tail -n1 | sed -r 's/.*\[(.*)%\].*/\1/')"
-echo "${vol}% "
+volume="$(pamixer --get-volume)"
+[ $(pamixer --get-mute) = true ] && echo "  婢  "&& exit
+
+if [ "$volume" -gt "70" ]; then
+	icon="墳"
+elif [ "$volume" -lt "30" ]; then
+	icon="奄"
+else
+	icon="奔"
+fi
+echo -e " $icon ${volume}% "

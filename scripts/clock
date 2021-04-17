@@ -1,4 +1,4 @@
 #! /bin/bash 
 
 clock="$(date +"%H:%M"| sed 's/  / /g')"
-echo -e "$clock "
+echo -e "   $clock "

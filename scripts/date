@@ -1,4 +1,4 @@
 #! /bin/bash 
 
 date="$(date +"%a, %B %d"| sed 's/  / /g')"
-echo -e "$date "
+echo -e "   $date "
