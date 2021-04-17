@@ -7,13 +7,13 @@ if [ $status = "Charging" ]; then
 else
     charge=""
 fi
-if [ $capacity > 75 ]; then
+if [ $capacity -gt 80 ]; then
     symbol=""
-elif [ $capacity > 50 ]; then
+elif [ $capacity -gt 50 ]; then
     symbol=""
-elif [ $capacity > 25 ]; then
+elif [ $capacity -gt 25 ]; then
     symbol=""
-elif [ $capacity > 10 ]; then
+elif [ $capacity -gt 10 ]; then
     symbol=""
 else
     symbol=""
