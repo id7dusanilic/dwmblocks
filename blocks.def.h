@@ -3,6 +3,8 @@ static const Block blocks[] = {
 	/*Icon*/ /*Command*/ /*Update Interval*/ /*Update Signal*/
 	{"",     "~/software/dwmblocks/scripts/memory",    5,    1},
 
+	{"",     "~/software/dwmblocks/scripts/language",  0,    15},
+
 	{"",     "~/software/dwmblocks/scripts/volume",    0,    10},
 
 	{"",     "~/software/dwmblocks/scripts/battery",   5,    11},

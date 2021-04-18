@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Note ~/.current_lang needs to be created and initilised in the
+# autostart.sh script
+
+CURRENT_LANG_PATH="/home/minimalist/.current_lang"
+CURRENT_LANG=$(cat $CURRENT_LANG_PATH)
+
+case $CURRENT_LANG in
+    "us")
+        CURRENT_LANG="sr"
+        ;;
+    "sr")
+        CURRENT_LANG="ср"
+        ;;
+    "ср")
+        CURRENT_LANG="us"
+        ;;
+    *)
+        exit
+        ;;
+esac
+echo $CURRENT_LANG > $CURRENT_LANG_PATH
+echo "   $CURRENT_LANG "
