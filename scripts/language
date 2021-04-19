@@ -11,9 +11,9 @@ case $CURRENT_LANG in
         CURRENT_LANG="sr"
         ;;
     "sr")
-        CURRENT_LANG="ср"
+        CURRENT_LANG="cp"
         ;;
-    "ср")
+    "cp")
         CURRENT_LANG="us"
         ;;
     *)

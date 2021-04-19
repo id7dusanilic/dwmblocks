@@ -1,7 +1,5 @@
 #!/bin/bash 
 
-
-
 status=$(cat /sys/class/power_supply/BAT0/status)
 capacity=$(cat /sys/class/power_supply/BAT0/capacity)
 if [ $status = "Discharging" ]; then
@@ -27,6 +25,7 @@ if [ $status = "Discharging" ]; then
         symbol=""
     else
         symbol=""
+	notify-send -i ~/software/dwmblocks/scripts/icons/lowbat.png "Battery Extremly Low" "Plug in the AC adapter"
     fi
 else
     if [ $capacity -gt 95 ]; then
