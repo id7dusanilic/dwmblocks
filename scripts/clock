@@ -1,4 +1,6 @@
 #! /bin/bash 
 
 clock="$(date +"%H:%M"| sed 's/  / /g')"
-echo -e "   $clock "
+# If time is 00:00 signal the date to change
+[ $clock = "00:00" ] && kill -39 $(pidof dwmblocks)
+echo -e "  $clock"

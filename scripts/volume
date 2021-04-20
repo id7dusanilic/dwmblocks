@@ -10,4 +10,4 @@ elif [ "$volume" -lt "30" ]; then
 else
 	icon="奔"
 fi
-echo -e " $icon ${volume}% "
+printf "$icon ${volume}%%"
